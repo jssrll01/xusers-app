@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: xusers-app
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.0
+      - key: VITE_USERS_ACCESS_CODE
+        sync: false
