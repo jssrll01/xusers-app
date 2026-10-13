@@ -144,7 +144,7 @@ export default function CrudPage({
       )}
 
       {loading && items.length === 0 ? (
-        <div className="neu-card" style={{ padding: 30, textAlign: 'center' }} className="muted">Loading…</div>
+        <div className="neu-card muted" style={{ padding: 30, textAlign: 'center' }}>Loading…</div>
       ) : filtered.length === 0 ? (
         <div className="neu-card" style={{ padding: 30, textAlign: 'center' }}>
           <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 4 }}>
